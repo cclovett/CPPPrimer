@@ -23,7 +23,18 @@ int txt_size()
 
 int main()
 {
-    unsigned int ia[10];
+    std::__1::vector<int> s {1,2,3,4,5,6};
+    for (auto &i : s)
+    {
+        i *= i;
+    }
+    for (auto i : s) {
+        std::cout << i << std::endl;
+    }
+    
+    std::__1::vector<int>::size_type s1 = s.size();
+    
+//    unsigned int ia[10];
     
 //    vector<int> ia = {0,1,2,3,4,5,6,7,8,9};
 //    decltype(ia) ia2;
@@ -55,7 +66,7 @@ int main()
 //    
 //    int *(&arry)[10] = ptrs;
 //    
-    cout << "" << endl;
+//    cout << "" << endl;
     
 //    vector<int> v{0,1,2,3,4,5,5,6,7,8,9,10};
 //    auto begin = v.cbegin();
