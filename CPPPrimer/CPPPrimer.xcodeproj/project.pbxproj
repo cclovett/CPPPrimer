@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		428D158A1A3A94C20026FA28 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 428D15891A3A94C20026FA28 /* main.cpp */; };
+		42EC6C6A1B53C5940049FBA3 /* Chapter6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42EC6C681B53C5940049FBA3 /* Chapter6.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,11 @@
 		42637F421A3FC53400E5127D /* Sales_item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sales_item.h; sourceTree = "<group>"; };
 		428D15861A3A94C20026FA28 /* CPPPrimer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPPPrimer; sourceTree = BUILT_PRODUCTS_DIR; };
 		428D15891A3A94C20026FA28 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		42AAFA921B58F5C4000C5F72 /* Screen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
+		42AAFA931B58FE38000C5F72 /* Window_mgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Window_mgr.h; sourceTree = "<group>"; };
+		42B4A97A1B5673B800EB09C5 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		42EC6C681B53C5940049FBA3 /* Chapter6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Chapter6.cpp; sourceTree = "<group>"; };
+		42EC6C691B53C5940049FBA3 /* Chapter6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter6.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,11 @@
 				42637F421A3FC53400E5127D /* Sales_item.h */,
 				428D15891A3A94C20026FA28 /* main.cpp */,
 				4252218B1A538F4C002D6D3E /* Sales_data.h */,
+				42EC6C691B53C5940049FBA3 /* Chapter6.h */,
+				42EC6C681B53C5940049FBA3 /* Chapter6.cpp */,
+				42B4A97A1B5673B800EB09C5 /* Person.h */,
+				42AAFA921B58F5C4000C5F72 /* Screen.h */,
+				42AAFA931B58FE38000C5F72 /* Window_mgr.h */,
 			);
 			path = CPPPrimer;
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42EC6C6A1B53C5940049FBA3 /* Chapter6.cpp in Sources */,
 				428D158A1A3A94C20026FA28 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
