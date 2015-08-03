@@ -16,6 +16,9 @@
 #include "Person.h"
 #include "Screen.h"
 #include "Window_mgr.h"
+#include "X.h"
+#include "Y.h"
+#include "example.h"
 
 using namespace std;
 
@@ -453,33 +456,51 @@ int main(int argc, char *argv[])
 //            }
 //        }
 //    }
-    void sa(Person a);
+//    void sa(Person a);
+//    
+//    {
+//        Person a = Person("name","adderss");
+//        vector<Person> sb;
+//        sb.push_back(a);
+//        
+//        sa(a);
+//    }
+//    
+//    Screen s1 = Screen(5, 5, ' ');
+//
+//    s1.move(4, 0).set('#').display(cout);
+//    cout << "\n";
+//    s1.display(cout);
+//    cout << "\n" << endl;
+//    
+//    printf("111");
     
-    {
-        Person a = Person("name","adderss");
-        vector<Person> sb;
-        sb.push_back(a);
-        
-        sa(a);
-    }
+//    Screen::pos ht = 24, wd = 80;
+//    Screen scr(ht,wd,' ');
+//    Screen *p = &scr;
+//    char c = scr.get();
+//    char x = p -> get();
+//    
+//    string s(&c);
+//    
+//    cout << x << endl;
     
-    Screen s1 = Screen(5, 5, ' ');
-
-    s1.move(4, 0).set('#').display(cout);
-    cout << "\n";
-    s1.display(cout);
-    cout << "\n" << endl;
+//    vector<NoDefault> vec(10);
     
-    printf("111");
+    string null_book = "9-999-99999-9";
+    
+    Sales_data item;
+    item.combine(static_cast<Sales_data>(cin));
+    
     return EXIT_SUCCESS;
 }
 
-void sa(Person a)
-{
-    a.strAddress = "sb";
-    print(cout, a);
-    cout << endl;
-}
+//void sa(Person a)
+//{
+//    a.strAddress = "sb";
+//    print(cout, a);
+//    cout << endl;
+//}
 //int add(int , int)
 //{
 //    return 0;

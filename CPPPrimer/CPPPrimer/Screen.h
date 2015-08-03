@@ -9,13 +9,22 @@
 #ifndef CPPPrimer_Screen_h
 #define CPPPrimer_Screen_h
 
+class Screen;
+
+extern std::ostream& storeOn(std::ostream &, Screen &);
+
+
 class Screen {
     
+    friend class Window_mgr;
+    friend std::ostream & storeOn(std::ostream &, Screen &);
+    
 public:
+    
     typedef std::string::size_type pos;
 //    using pos = std::string::size_type; //同上
     Screen() = default;
-    Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c) {};
+    explicit Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c) {};
     char get() const {
         
         return contents[cursor];
@@ -29,6 +38,7 @@ public:
     
     Screen &display(std::ostream &os);
     const Screen &display(std::ostream &os) const;
+    pos size() const;
     
 private:
     pos cursor = 0;
@@ -84,6 +94,11 @@ inline const Screen & Screen::display(std::ostream &os) const
 inline void Screen::do_display(std::ostream &os) const
 {
     os << this-> contents;
+}
+
+Screen::pos Screen::size() const
+{
+    return height * width;
 }
 
 #endif

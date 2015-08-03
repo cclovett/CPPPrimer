@@ -76,25 +76,32 @@
 //}
 
 
-
-
-
-
-
-
 class Sales_data {
-    
-    friend Sales_data add(const Sales_data &a, const Sales_data &b);
-    friend std::istream &read(std::istream &is, Sales_data &data);
-    friend std::iostream &print(std::iostream &io, const Sales_data &data);
-    
+
 public:
-    Sales_data() = default;
-    Sales_data(const std::string &s, unsigned n, double p): bookNo(s), units_sold(n), revenue(p) {};
-    Sales_data(const std::string &s): bookNo(s) {};
-    Sales_data(std::istream &is) {
+    friend Sales_data add(const Sales_data &a, const Sales_data &b);
+    
+    friend std::ostream & print1(std::ostream &io, const Sales_data &data);
+    
+    friend std::istream & read(std::istream &is, Sales_data &data);
+    
+
+    Sales_data() {
+        
+        printf("Sales_data()\n");
+    };
+    Sales_data(const std::string &s, unsigned n, double p): bookNo(s), units_sold(n), revenue(p) {
+    
+        printf("Sales_data(const std::string &s, unsigned n, double p)\n");
+    };
+    explicit Sales_data(const std::string &s): bookNo(s) {
+    
+        printf("explicit Sales_data(const std::string &s)\n");
+    };
+    explicit Sales_data(std::istream &is) {
         
         read(is, *this);
+        printf("explicit Sales_data(std::istream &is)\n");
     };
     inline std::string isbn() const;
     inline Sales_data &combine(const Sales_data &data);
@@ -116,7 +123,7 @@ inline std::string Sales_data::isbn() const
     return bookNo;
 }
 
-inline Sales_data & Sales_data::combine(const Sales_data &data)
+inline Sales_data& Sales_data::combine(const Sales_data &data)
 {
     this-> units_sold += data.units_sold;
     this-> revenue += data.revenue;
@@ -130,7 +137,7 @@ Sales_data add(const Sales_data &a, const Sales_data &b)
     return t;
 }
 
-std::istream &read(std::istream &is, Sales_data &data)
+std::istream & read(std::istream &is, Sales_data &data)
 {
     double price = 0;
     is >> data.bookNo >> data.units_sold >> price;
@@ -138,7 +145,7 @@ std::istream &read(std::istream &is, Sales_data &data)
     return is;
 }
 
-std::iostream &print(std::iostream &io, const Sales_data &data)
+std::ostream & print1(std::ostream &io, const Sales_data &data)
 {
     io << data.isbn() << " " << data.units_sold << " " << data.revenue << " " << data.avg_price();
     return io;
