@@ -23,9 +23,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		420631A01B6B73E900D00DE9 /* Sales_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sales_data.h; path = ../../CPPPrimer/CPPPrimer/Sales_data.h; sourceTree = "<group>"; };
-		420631A11B6C697500D00DE9 /* PersonInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonInfo.h; sourceTree = "<group>"; };
-		420631A21B6C7B8600D00DE9 /* noDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = noDefault.h; sourceTree = "<group>"; };
+		420A9EB11B6F601800208365 /* Chapter6.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Chapter6.cpp; sourceTree = "<group>"; };
+		420A9EB21B6F601800208365 /* Chapter6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chapter6.h; sourceTree = "<group>"; };
+		420A9EB31B6F601800208365 /* example.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = example.h; sourceTree = "<group>"; };
+		420A9EB41B6F601800208365 /* noDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = noDefault.h; sourceTree = "<group>"; };
+		420A9EB51B6F601800208365 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		420A9EB61B6F601800208365 /* PersonInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonInfo.h; sourceTree = "<group>"; };
+		420A9EB71B6F601800208365 /* Sales_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sales_data.h; sourceTree = "<group>"; };
+		420A9EB81B6F601800208365 /* Sales_item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sales_item.h; sourceTree = "<group>"; };
+		420A9EB91B6F601800208365 /* Screen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
+		420A9EBA1B6F601800208365 /* Window_mgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Window_mgr.h; sourceTree = "<group>"; };
+		420A9EBB1B6F601800208365 /* X.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = X.h; sourceTree = "<group>"; };
+		420A9EBC1B6F601800208365 /* Y.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Y.h; sourceTree = "<group>"; };
+		420A9EBD1B6F605C00208365 /* mHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mHeader.h; sourceTree = "<group>"; };
 		4285AAF21B6628CF00E4E950 /* CPPPrimer2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPPPrimer2; sourceTree = BUILT_PRODUCTS_DIR; };
 		4285AAF51B6628CF00E4E950 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +51,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		420A9EB01B6F601800208365 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				420A9EB11B6F601800208365 /* Chapter6.cpp */,
+				420A9EB21B6F601800208365 /* Chapter6.h */,
+				420A9EB31B6F601800208365 /* example.h */,
+				420A9EB41B6F601800208365 /* noDefault.h */,
+				420A9EB51B6F601800208365 /* Person.h */,
+				420A9EB61B6F601800208365 /* PersonInfo.h */,
+				420A9EB71B6F601800208365 /* Sales_data.h */,
+				420A9EB81B6F601800208365 /* Sales_item.h */,
+				420A9EB91B6F601800208365 /* Screen.h */,
+				420A9EBA1B6F601800208365 /* Window_mgr.h */,
+				420A9EBB1B6F601800208365 /* X.h */,
+				420A9EBC1B6F601800208365 /* Y.h */,
+			);
+			name = Classes;
+			path = ../../Classes;
+			sourceTree = "<group>";
+		};
 		4285AAE91B6628CF00E4E950 = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				4285AAF51B6628CF00E4E950 /* main.cpp */,
-				420631A01B6B73E900D00DE9 /* Sales_data.h */,
-				420631A11B6C697500D00DE9 /* PersonInfo.h */,
-				420631A21B6C7B8600D00DE9 /* noDefault.h */,
+				420A9EBD1B6F605C00208365 /* mHeader.h */,
+				420A9EB01B6F601800208365 /* Classes */,
 			);
 			path = CPPPrimer2;
 			sourceTree = "<group>";
