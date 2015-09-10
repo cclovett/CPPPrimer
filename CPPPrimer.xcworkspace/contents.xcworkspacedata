@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CPrimerPlus/CPrimerPlus.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CPPPrimer2/CPPPrimer2.xcodeproj">
    </FileRef>
    <FileRef
