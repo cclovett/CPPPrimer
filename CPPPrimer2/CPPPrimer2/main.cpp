@@ -11,6 +11,7 @@
 //Linux   Ctrl+D 结束cin输入
 
 using namespace std;
+using namespace std::placeholders;
 
 //istream& func8_1_2(istream &io)
 //{
@@ -30,7 +31,8 @@ using namespace std;
 //const vector<int>::const_iterator ttfind(const vector<int> &a, int b);
 //void insertSS(forward_list<string> &li,const string a,const string b);
 //bool isShorter(const string &s1, const string &s2);
-void biggies(vector<string> &words, vector<string>::size_type sz);
+//void biggies(vector<string> &words, vector<string>::size_type sz);
+//void counts(vector<string> &words, vector<string>::size_type sz);
 
 int main(int argc, const char * argv[])
 {
@@ -471,8 +473,11 @@ int main(int argc, const char * argv[])
 //    }
     
     
-    {
-        vector<string> vec = {"1","21","122","4","32","222222"};
+//    {
+//        vector<string> vec = {"1","21","122","1","32","222222"};
+//        vector<string> vec1;
+//        sort(vec.begin(), vec.end(), [](const string &a, const string &b) -> bool { return a.size() < b.size(); });
+//        auto copy = unique_copy(vec.begin(), vec.end(), back_inserter(vec1));
 //        sort(vec.begin(), vec.end());
 //        auto end_unique = unique(vec.begin(), vec.end());
 //        vec.erase(end_unique, vec.end());
@@ -484,34 +489,279 @@ int main(int argc, const char * argv[])
 //        };
 //
 //        partition(vec.begin(), vec.end(), f);
-        biggies(vec, 3);
+//        biggies(vec, 3);
+//        
+//        auto f = [](int a, int b) { return a + b;};
+//        auto n = f(4,5);
+//        printf("%i",n);
         
-        auto f = [](int a, int b) { return a + b;};
-        auto n = f(4,5);
-        printf("%i",n);
+//        counts(vec, 3);
+//       auto bbb = back_inserter(vec);
+//        *bbb = "tttt";
+//                *bbb = "ttttt";
+//        
+//    }
+    
+//    {
+//        vector<int> vv = {0,1,2,3,4,5,6,7,8,9};
+//        vector<int> v1;
+//        vector<int> v2;
+//        list<int> v3;
+//        
+//        copy(vv.begin(), vv.end(), inserter(v1,v1.end()));
+//        copy(vv.begin(), vv.end(), back_inserter(v2));
+//        copy(vv.begin(), vv.end(), front_inserter(v3));
+//    }
+    
+//    {
+//        istream_iterator<int> int_it(cin);
+//        istream_iterator<int> int_eof;
+//        ifstream in("test3");
+//        istream_iterator<string> str_it(in);
+        
+//        vector<int> vec;
+//        istream_iterator<int> in_iter(cin);
+//        istream_iterator<int> eof;
+//        while (in_iter != eof) {
+//            
+//            vec.push_back(*in_iter);
+//            in_iter++;
+//        }
+        
+//        ifstream in("test3");
+//        istream_iterator<string> in_iter(in), eof;
+//        vector<string> vec (in_iter , eof);
+        
+//        for (auto s : vec)
+//            cout << s <<endl;
+        
+//        vector<string> x = {"1","2","3"};
+//        for (auto i = x.crbegin(); i != x.crend(); ++i) {
+//            
+//            cout << *i << endl;
+//        }
+//        for (auto i = x.cend(); i >= x.cbegin(); --i) {
+//            if (i != x.cend()) {
+//                
+//                cout << *i << endl;
+//            }
+//        }
+//    }
+    
+//    {
+////        list<int> x = {1,2,3,0,4,5,6,7};
+////        auto comma = find(x.crbegin(), x.crend(), 0);
+//        vector<int> s = {0,1,2,3,4,5,6,7,8,9};
+//        
+//        auto b3 = find(s.cbegin(), s.cend(), 3);
+//        auto b7 = find(s.cbegin(), s.cend(), 7);
+//        
+//        if (b3 != s.cend() && b7 != s.cend()) {
+//            
+//            cout << "ssss" << endl;
+//        }
+//        
+//    }
+    
+//    {
+//        map<string, size_t> word_count;
+//        set<string> exc = {"a","b","c"};
+//        string word;
+//        while (cin >> word) {
+//            
+//            if (exc.find(word)==exc.end()) {
+//            
+//                ++ word_count[word];
+//            }
+//        }
+//        
+//        for (const auto &a : word_count) {
+//            
+//            auto b = a.first;
+//            cout << b << " " << a.second << endl;
+//        }
+//    }
+    
+//    {
+////        bool compareIsbn(const Sales_data &lhs, const Sales_data &rhs);
+//////        auto ddd = decltype(compareIsbn)*;
+////        multiset<Sales_data, bool(*)(const Sales_data &a,const Sales_data &b)> bookstore(compareIsbn);
+//        
+////        multiset<string> c {"1","2","3"};
+////        vector<string> v {"2"};
+//        
+////        copy(v.begin(), v.end(), inserter(c, c.end()));
+////        copy(v.begin(), v.end(), back_inserter(c));
+////        copy(c.begin(), c.end(), inserter(v, v.end()));
+////        copy(c.begin(), c.end(), back_inserter(v));
+//        
+//        map<string, int> word_count {{"1",1},{"2",2}};
+////        word_count.at("1");
+//////        if (word_count["1"] == NULL) {
+////        
+////            word_count["1"] = 1;
+//////        }
+////        
+////        
+////        auto b = word_count.cbegin();
+////        set<int> set2;
+////        set2.insert({1,2,3,4});
+//        
+////        auto beg = word_count.lower_bound("1");
+////        auto end = word_count.upper_bound("3");
+////        
+////        for (; beg != end; ++beg) {
+////            
+////            cout << beg->second << endl;
+////        }
+//        
+////        for (auto pos = word_count.equal_range("1"); pos.first != pos.second; ++pos.first) {
+////            
+////            cout << pos.first->second << endl;
+////        }
+//        
+//        
+//    }
+    
+//    {
+//        ifstream mapfile = ifstream("test1");
+//        ifstream intpu = ifstream("test2");
+//        
+//        void word_transform(ifstream &map_file, ifstream &input);
+//        word_transform(mapfile, intpu);
+//    }
+    
+//    {
+//        shared_ptr<int> p = make_shared<int>(42);
+////        auto p2 = make_shared<vector<string>>();
+//        auto q = p;
+//        cout << p.use_count() << endl;
+//    }
+    
+//    {
+//        StrBlob b1;
+//        {
+//            StrBlob b2 = {"a","b"};
+//            b1 = b2;
+//            b2.push_back("c");
+//        }
+//    }
+
+    {
+        int ix = 1024, *pi = &ix, *pi2 = new int (1024);
+        typedef unique_ptr<int> IntP;
+        
+//        IntP p0(ix);// 应该要指针
+//        IntP p1(pi);// 正确
+//        IntP p2(pi2);// 正确
+        IntP p3(&ix);// 正确
+//        IntP p4(new int (2048));// 正确
+//        IntP p5(p2.get());// 2次 delete
     }
     return EXIT_SUCCESS;
 }
 
-void biggies(vector<string> &words, vector<string>::size_type sz)
-{
-    stable_sort(words.begin(), words.end(), [](const string &s1, const string &s2) {
-        return s1.size() < s2.size();
-    });
-    
-    auto wc = find_if(words.begin(), words.end(), [sz](const string &a) {
-        return a.size() >= sz;
-    });
-    
-    auto count = words.end() - wc;
-    cout << count << " " << "words" << " of length " << sz << " or longer" << endl;
-    for_each(wc, words.end(), [](const string &s) {
-        cout << s << " ";
-    });
-    
-    cout << endl;
-}
+//const string & transform(const string &s, const map<string, string> &m);
+//map<string, string> buildMap(ifstream &map_file);
+//void word_transform(ifstream &map_file, ifstream &input)
+//{
+//    auto mapFile = buildMap(map_file);
+//    string text,word;
+//    while (getline(input, text)) {
+//        
+//        bool isFirst = true;
+//        istringstream stream = istringstream(text);
+//        while (stream >> word) {
+//            
+//            if (isFirst) {
+//                
+//                isFirst = false;
+//            }
+//            else {
+//                
+//                cout << " ";
+//            }
+//            
+//            cout << transform(word, mapFile);
+//        }
+//        
+//        cout << endl;
+//    }
+//}
+//
+//map<string, string> buildMap(ifstream &map_file)
+//{
+//    map<string, string> mapF;
+////    decltype(buildMap)* mapF;
+//    string word,key;
+//    while (map_file >> key && getline(map_file, word)) {
+//        
+////        mapF[key] = word.substr(1);
+//        mapF.insert({key, word.substr(1)});
+//    }
+//    return mapF;
+//}
+//
+//const string & transform(const string &s, const map<string, string> &m)
+//{
+//    auto mapit = m.find(s);
+//    if (mapit != m.cend()) {
+//        
+//        return mapit->second;
+//    }
+//    return s;
+//}
 
+//bool compareIsbn(const Sales_data &lhs, const Sales_data &rhs)
+//{
+//    return lhs.isbn() < rhs.isbn();
+//}
+//
+//ostream &print2(ostream &os, const string &s, char c)
+//{
+//    return os << s << c;
+//}
+//
+//void biggies(vector<string> &words, vector<string>::size_type sz)
+//{
+//    stable_sort(words.begin(), words.end(), [](const string &s1, const string &s2) {
+//        return s1.size() < s2.size();
+//    });
+//    
+//    auto wc = find_if(words.begin(), words.end(), [sz](const string &a) -> bool {
+//        return a.size() >= sz;
+//    });
+//    
+//    auto count = words.end() - wc;
+//    cout << count << " " << "words" << " of length " << sz << " or longer" << endl;
+////    for_each(wc, words.end(), [](const string &s) {
+////        cout << s << " ";
+////    });
+//    for_each(wc, words.end(), bind(print2, ref(cout), _1, ' '));
+//    
+//    cout << endl;
+//}
+//
+//bool check_size(const string &a, string::size_type sz)
+//{
+//    return a.size() >= sz;
+//}
+//
+//void counts(vector<string> &words, vector<string>::size_type sz)
+//{
+//    stable_sort(words.begin()
+//                , words.end()
+//                , [](const string &a, const string &b) -> bool {
+//
+//                    return a.size() < b.size();
+//                });
+//    
+//    auto c = count_if(words.begin()
+//                      , words.end()
+//                      , bind(check_size, _1, sz));
+//    
+//    cout << c << endl;
+//}
 
 //bool isShorter(const string &s1, const string &s2)
 //{

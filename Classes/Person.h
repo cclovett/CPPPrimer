@@ -42,4 +42,5 @@ inline std::ostream & print(std::ostream &os, const Person &p)
     os << "name:" << p.strName << " address:" << p.strAddress;
     return os;
 }
+
 #endif

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4285AAF61B6628CF00E4E950 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4285AAF51B6628CF00E4E950 /* main.cpp */; };
+		42AF85751B9E6F7C0024207E /* StrBlob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42AF85731B9E6F7C0024207E /* StrBlob.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		420A9EBD1B6F605C00208365 /* mHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mHeader.h; sourceTree = "<group>"; };
 		4285AAF21B6628CF00E4E950 /* CPPPrimer2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPPPrimer2; sourceTree = BUILT_PRODUCTS_DIR; };
 		4285AAF51B6628CF00E4E950 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		42AF85731B9E6F7C0024207E /* StrBlob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StrBlob.cpp; sourceTree = "<group>"; };
+		42AF85741B9E6F7C0024207E /* StrBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrBlob.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				420A9EBA1B6F601800208365 /* Window_mgr.h */,
 				420A9EBB1B6F601800208365 /* X.h */,
 				420A9EBC1B6F601800208365 /* Y.h */,
+				42AF85741B9E6F7C0024207E /* StrBlob.h */,
+				42AF85731B9E6F7C0024207E /* StrBlob.cpp */,
 			);
 			name = Classes;
 			path = ../../Classes;
@@ -153,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42AF85751B9E6F7C0024207E /* StrBlob.cpp in Sources */,
 				4285AAF61B6628CF00E4E950 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +247,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -251,7 +257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

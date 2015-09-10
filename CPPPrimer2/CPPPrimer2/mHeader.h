@@ -20,10 +20,14 @@
 #include <forward_list>
 #include <algorithm>
 #include <numeric>
+#include <functional>
+#include <map>
+#include <set>
 
 
 #include "Sales_data.h"
 #include "PersonInfo.h"
 #include "noDefault.h"
+#include "StrBlob.h"
 
 #endif
