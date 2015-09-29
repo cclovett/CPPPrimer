@@ -647,17 +647,70 @@ int main(int argc, const char * argv[])
 //        }
 //    }
 
+//    {
+//        int ix = 1024, *pi = &ix, *pi2 = new int (1024);
+//        typedef unique_ptr<int> IntP;
+//        
+////        IntP p0(ix);// 应该要指针
+////        IntP p1(pi);// 正确
+////        IntP p2(pi2);// 正确
+//        IntP p3(&ix);// 正确
+////        IntP p4(new int (2048));// 正确
+////        IntP p5(p2.get());// 2次 delete
+//    }
+    
     {
-        int ix = 1024, *pi = &ix, *pi2 = new int (1024);
-        typedef unique_ptr<int> IntP;
-        
-//        IntP p0(ix);// 应该要指针
-//        IntP p1(pi);// 正确
-//        IntP p2(pi2);// 正确
-        IntP p3(&ix);// 正确
-//        IntP p4(new int (2048));// 正确
-//        IntP p5(p2.get());// 2次 delete
+        ifstream sFile = ifstream("test3");
+        if (sFile) {
+            
+            vector<string> vStrList = vector<string>();
+            {
+                string text;
+                while (getline(sFile, text)) {
+                    
+                    vStrList.push_back(text);
+                }
+            }
+            
+            if (vStrList.size() > 0) {
+                
+                while (true) {
+                    
+                    cout << "输入一个字：";
+                    string s;
+                    if (cin >> s && s != "q") {
+                        
+                        set<int> setIndex;
+                        for (int i = 0; i < vStrList.size(); ++i) {
+                            
+                            string word;
+                            istringstream stringS = istringstream(vStrList[i]);
+                            while (stringS >> word) {
+                                
+                                if (word == s) {
+                                    
+                                    setIndex.insert(i);
+                                    break;
+                                }
+                            }
+                        }
+                        
+                        cout << s << " occurs " << setIndex.size() << " times" << endl;
+                        for (auto bb : setIndex) {
+                            
+                            int xIndex = bb + 1;
+                            cout << "\t(line " << xIndex << ")" << vStrList[bb] << endl;
+                        }
+                    }
+                    else {
+                        
+                        break;
+                    }
+                }
+            }
+        }
     }
+    
     return EXIT_SUCCESS;
 }
 

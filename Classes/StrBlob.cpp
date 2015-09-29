@@ -16,35 +16,10 @@ void test_process(shared_ptr<int> ptr)
 
 StrBlob::StrBlob() : data(make_shared<vector<string>>()), test1(make_shared<string>("1")), test2("2")
 {
-    const int *p = new const int();
-    delete p;
 }
 
 StrBlob::StrBlob(initializer_list<string> il) : data(make_shared<vector<string>>(il)), test1(make_shared<string>("t1")), test2("t2")
 {
-    {
-        //正确
-//        shared_ptr<int> p(new int(42));
-        
-//        shared_ptr<int> p(new int(42), [](int *a){
-//            
-//            delete a;
-//        });
-//        
-//        test_process(p);
-//        int i = *p;
-//        cout << "2=" << i << endl;
-    }
-    {
-        
-    }
-//    {
-//        //错误
-//        int *x(new int(1024));
-////        test_process(x);//错误
-//        test_process(shared_ptr<int>(x));// 合法，但是内存会释放
-//        int j = *x;//未定义？
-//    }
 }
 
 void StrBlob::check(size_type i, const std::string &msg) const

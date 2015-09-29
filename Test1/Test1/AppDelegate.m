@@ -48,6 +48,10 @@
 //        [self saveContext];
 //        NSLog(@"%@",@(ety.isDeleted));
 //    }
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    NSArray *languages = [defs objectForKey:@"AppleLanguages"];
+    NSString *preferredLang = [languages firstObject];
+    NSLog(@"%@",preferredLang);
     
     return YES;
 }
